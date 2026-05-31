@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<!--
+  Matteo Trachsel — Portfolio
+  Design rationale:
+  • Warm editorial system from the Ikigai design system (cream / sage / terracotta).
+  • Narrative built for innovation & product-management recruiters: thesis = "I find
+    product-market fit through lean MVPs", proof = a portfolio of shipped apps.
+  • Each app gets one muted accent (Ikigai quadrant palette) for visual rhythm.
+  • Flagships (Ikigai, Ottolenghi, Sleep Tracker) = large feature rows with live
+    phone previews. Secondary apps = a 2-up grid with live browser/phone previews.
+  • Live previews are real lazy-loaded iframes inside device/browser chrome,
+    with "Open live" always available as the robust fallback.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matteo Trachsel — Product-Market Fit for New Innovation</title>
+<meta name="description" content="Matteo Trachsel — Head of Business Innovation. A portfolio of shipped MVPs built to find product-market fit through a lean process.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<script>document.body.classList.add('js');</script>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<div class="bg-field" aria-hidden="true">
+  <div class="bloom b1" data-drift="0.06"></div>
+  <div class="bloom b2" data-drift="-0.09"></div>
+  <div class="bloom b3" data-drift="0.05"></div>
+  <div class="grain"></div>
+</div>
+
+<!-- ============================ NAV ============================ -->
+<nav class="nav" id="nav">
+  <a class="brand" href="#top">
+    <span class="mark">M</span>
+    <span>Matteo Trachsel</span>
+  </a>
+  <div class="links">
+    <a href="#thesis">Approach</a>
+    <a href="#work">Work</a>
+    <a href="#process">Process</a>
+    <a class="cta" href="#contact">Get in touch</a>
+  </div>
+</nav>
+
+<!-- ============================ HERO ============================ -->
+<header class="hero" id="top">
+  <canvas class="dot-field" id="dotField" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span>Head of Business Innovation · Building MVPs that find their market</span>
+    <h1 class="split">I find <span class="em">product-market&nbsp;fit</span> for new innovation.</h1>
+    <p class="lede">I'm <b>Matteo Trachsel</b> — an engineer and innovation lead who turns ideas into shipped products. I validate real user needs with fast MVPs, then iterate toward fit. <b>A lean process is how you earn product-market fit.</b> Below: the apps I've built living proof of that loop.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="#work">See the work <span class="arrow">↗</span></a>
+      <a class="btn btn-ghost" href="#thesis">How I work</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="n" data-count="7">7</div><div class="l">Shipped apps &amp; MVPs</div></div>
+      <div class="stat"><div class="n" data-count="4">4</div><div class="l">Months to PMF — China tea pilot</div></div>
+      <div class="stat"><div class="n">93k<span style="font-size:.5em">t</span></div><div class="l">CO₂e cut, Scope 1–3</div></div>
+      <div class="stat"><div class="n">200<span style="font-size:.6em">+</span></div><div class="l">Waitlist signups validated</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============================ THESIS ============================ -->
+<section class="thesis" id="thesis" style="--accent: var(--sage);">
+  <div class="wrap">
+    <div class="kicker reveal"><span class="idx">01</span> The approach</div>
+    <div class="grid" style="margin-top:34px;">
+      <blockquote class="reveal">
+        Most ideas die from <span class="hl">building the wrong thing well.</span> I de-risk innovation by putting small, real products in front of users — fast — and letting their behaviour decide what to build next.
+      </blockquote>
+      <div class="principles reveal d1 from-right" data-stagger>
+        <div class="p"><span class="num">01</span><div><h4>Start from the user, not the feature</h4><p>Every project begins with a validated need — interviews, jobs-to-be-done, and the smallest thing that tests it.</p></div></div>
+        <div class="p"><span class="num">02</span><div><h4>Ship the MVP, learn in public</h4><p>A live app in a week beats a perfect spec in a quarter. Real usage replaces opinion.</p></div></div>
+        <div class="p"><span class="num">03</span><div><h4>Pivot on evidence, not ego</h4><p>From Vapporio's many pivots to a 4-month tea-market fit — I follow the data until the curve bends.</p></div></div>
+        <div class="p"><span class="num">04</span><div><h4>Industrialise what works</h4><p>An engineer at heart: once there's fit, I hand a robust, manufacturable product to R&amp;D.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ WORK ============================ -->
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="head-row">
+      <div class="sec-head reveal">
+        <div class="kicker"><span class="idx">02</span> Selected work</div>
+        <h2>Built, shipped, and live.</h2>
+        <p class="sub">Each of these started as a hunch about a real need and became a working product. The previews below are the real apps, embedded live — interact with them, or open in a new tab.</p>
+      </div>
+    </div>
+
+    <!-- ===== Flagship 1 — Ikigai ===== -->
+    <article class="feature" style="--accent:#5A9A82;">
+      <div class="f-copy reveal">
+        <div class="app-kicker"><span class="badge">AI Coaching · PWA</span><span class="role">Concept → Build → Live</span></div>
+        <h3>Ikigai</h3>
+        <p class="desc">An AI career &amp; life coach that walks you through the Ikigai framework, then turns your purpose into concrete quarterly OKRs and monthly reviews. An empathetic GPT agent does the hard part — making reflection feel like a conversation, not a form.</p>
+        <div class="validated">
+          <span class="lab">What it<br>validated</span>
+          <p>People will commit to purpose work if the onboarding feels human. Conversational discovery + OKRs kept users coming back for monthly check-ins.</p>
+        </div>
+        <div class="tags">
+          <span class="tag">GPT agent</span><span class="tag">OKR engine</span><span class="tag">Installable PWA</span><span class="tag">Next.js</span>
+        </div>
+        <div class="links">
+          <a class="link-live" href="https://ikigai2.vercel.app/" target="_blank" rel="noopener">Open live <span class="ar">↗</span></a>
+        </div>
+      </div>
+      <div class="preview reveal d1">
+        <div class="device">
+          <div class="screen">
+            <div class="frame-holder" data-src="https://ikigai2.vercel.app/">
+              <div class="poster" style="background:linear-gradient(160deg,#7CB8A0,#5A9A82);"><div class="shimmer"></div><div class="ph-mark">IK</div></div>
+              <div class="interact-hint">Tap to interact</div>
+              <div class="click-shield"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== Flagship 2 — Ottolenghi (flip) ===== -->
+    <article class="feature flip" style="--accent:#CC8456;">
+      <div class="f-copy reveal">
+        <div class="app-kicker"><span class="badge">Lifestyle · Real-time</span><span class="role">Personal MVP → Daily use</span></div>
+        <h3>Ottolenghi&nbsp;Simple</h3>
+        <p class="desc">A recipe companion for 130+ dishes — browse by chapter, search by ingredient, hit "Surprise Me," and build a shopping list. A household code syncs the weekly menu and list with your partner in real time.</p>
+        <div class="validated">
+          <span class="lab">What it<br>validated</span>
+          <p>Meal planning is a shared, two-person job. Real-time household sync turned a personal tool into something couples actually plan their week around.</p>
+        </div>
+        <div class="tags">
+          <span class="tag">Real-time sync</span><span class="tag">Search &amp; filter</span><span class="tag">Shopping list</span><span class="tag">PWA</span>
+        </div>
+        <div class="links">
+          <a class="link-live" href="https://ottolenghi.vercel.app/" target="_blank" rel="noopener">Open live <span class="ar">↗</span></a>
+        </div>
+      </div>
+      <div class="preview reveal d1">
+        <div class="device">
+          <div class="screen">
+            <div class="frame-holder" data-src="https://ottolenghi.vercel.app/">
+              <div class="poster" style="background:linear-gradient(160deg,#C98A4E,#854d0e);"><div class="shimmer"></div><div class="ph-mark">OS</div></div>
+              <div class="interact-hint">Tap to interact</div>
+              <div class="click-shield"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== Flagship 3 — Sleep Tracker ===== -->
+    <article class="feature" style="--accent:#4E92BD;">
+      <div class="f-copy reveal">
+        <div class="app-kicker"><span class="badge">Health · Data</span><span class="role">Need → MVP → Live</span></div>
+        <h3>Sleep&nbsp;Tracker</h3>
+        <p class="desc">A tool for new parents to log and scientifically analyse a baby's sleep cycles. Quick nightly logging turns into pattern insight — so exhausted parents can see what's actually happening instead of guessing.</p>
+        <div class="validated">
+          <span class="lab">What it<br>validated</span>
+          <p>Parents don't want more data — they want reassurance. Framing logs as readable cycle patterns was the feature that made it stick.</p>
+        </div>
+        <div class="tags">
+          <span class="tag">Cycle analysis</span><span class="tag">Offline-first</span><span class="tag">Installable PWA</span><span class="tag">Charts</span>
+        </div>
+        <div class="links">
+          <a class="link-live" href="https://sleeptracker-five.vercel.app/" target="_blank" rel="noopener">Open live <span class="ar">↗</span></a>
+        </div>
+      </div>
+      <div class="preview reveal d1">
+        <div class="device">
+          <div class="screen">
+            <div class="frame-holder" data-src="https://sleeptracker-five.vercel.app/">
+              <div class="poster" style="background:linear-gradient(160deg,#a8d8ea,#6BAED6);"><div class="shimmer"></div><div class="ph-mark">ST</div></div>
+              <div class="interact-hint">Tap to interact</div>
+              <div class="click-shield"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <!-- ===== Secondary grid ===== -->
+  <div class="wrap">
+    <div class="grid-apps" data-stagger>
+
+      <!-- Sigmascope -->
+      <article class="card reveal" style="--accent:#5E9C8B;">
+        <div class="card-view">
+          <div class="frame-holder" data-src="https://sigmascope.ch/" data-w="1340">
+            <div class="poster" style="background:linear-gradient(150deg,#5E9C8B,#3f7b6c);"><div class="shimmer"></div><div class="ph-mark">SS</div></div>
+            <div class="interact-hint">Tap to interact</div>
+            <div class="click-shield"></div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="top"><span class="name">Sigmascope</span><span class="chip">Sustainability · AI</span></div>
+          <p>A browsable, filterable explorer for Switzerland's BAFU life-cycle assessment (LCA) datasets — with an AI assistant that finds the right dataset from a plain-language description like "transport concrete".</p>
+          <div class="tags"><span class="tag">LCA data</span><span class="tag">AI assistant</span><span class="tag">CSV export</span></div>
+          <div class="card-foot">
+            <span class="live-pill"><span class="pdot"></span>Live preview</span>
+            <a class="open" href="https://sigmascope.ch/" target="_blank" rel="noopener">Open live <span class="ar">↗</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- vZEV -->
+      <article class="card reveal d1" style="--accent:#D9A441;">
+        <div class="card-view">
+          <div class="frame-holder" data-src="https://vzev-ogimatte.vercel.app/" data-w="1340">
+            <div class="poster" style="background:linear-gradient(150deg,#E6B85C,#C98A2E);"><div class="shimmer"></div><div class="ph-mark">vZ</div></div>
+            <div class="interact-hint">Tap to interact</div>
+            <div class="click-shield"></div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="top"><span class="name">vZEV</span><span class="chip">Energy · Tool</span></div>
+          <p>Upload smart-meter data and the tool computes each household's solar self-consumption to the 15-minute interval, then generates a transparent PDF bill. Runs entirely in the browser — no data leaves the device. Open source.</p>
+          <div class="tags"><span class="tag">Data viz</span><span class="tag">PDF billing</span><span class="tag">Open source</span></div>
+          <div class="card-foot">
+            <span class="live-pill"><span class="pdot"></span>Live preview</span>
+            <a class="open" href="https://vzev-ogimatte.vercel.app/" target="_blank" rel="noopener">Open live <span class="ar">↗</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- RockBox -->
+      <article class="card reveal" style="--accent:#B5794B;">
+        <div class="card-view">
+          <div class="frame-holder" data-src="https://rockbox-landing.vercel.app/" data-w="1340">
+            <div class="poster" style="background:linear-gradient(150deg,#C08B5C,#8a5a32);"><div class="shimmer"></div><div class="ph-mark">RB</div></div>
+            <div class="interact-hint">Tap to interact</div>
+            <div class="click-shield"></div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="top"><span class="name">RockBox</span><span class="chip">Hardware · PMF test</span></div>
+          <p>A premium Swiss wooden cradle, validated the lean way: a launch page and waitlist that drew <b>200+ parents</b> before a single unit was made — demand proof first, manufacturing second. App-controlled rocking via Bluetooth.</p>
+          <div class="tags"><span class="tag">Waitlist MVP</span><span class="tag">Demand validation</span><span class="tag">Landing</span></div>
+          <div class="card-foot">
+            <span class="live-pill"><span class="pdot"></span>Live preview</span>
+            <a class="open" href="https://rockbox-landing.vercel.app/" target="_blank" rel="noopener">Open live <span class="ar">↗</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- BabyRest -->
+      <article class="card reveal d1" style="--accent:#9683C4;">
+        <div class="card-view">
+          <div class="frame-holder" data-src="https://babyrest.netlify.app/" data-w="412">
+            <div class="poster" style="background:linear-gradient(150deg,#A99AD6,#7d6cb0);"><div class="shimmer"></div><div class="ph-mark">BR</div></div>
+            <div class="interact-hint">Tap to interact</div>
+            <div class="click-shield"></div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="top"><span class="name">BabyRest</span><span class="chip">Health · PWA</span></div>
+          <p>A calm, focused take on nightly baby-sleep logging — the iteration sibling to Sleep Tracker, exploring a gentler, lower-friction UI for the 3am reality of one-handed logging.</p>
+          <div class="tags"><span class="tag">One-hand UX</span><span class="tag">Iteration study</span><span class="tag">PWA</span></div>
+          <div class="card-foot">
+            <span class="live-pill"><span class="pdot"></span>Live preview</span>
+            <a class="open" href="https://babyrest.netlify.app/" target="_blank" rel="noopener">Open live <span class="ar">↗</span></a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PROCESS ============================ -->
+<section class="process" id="process" style="--accent:#5A9A82;">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker"><span class="idx">03</span> The lean loop</div>
+      <h2>How a hunch becomes fit.</h2>
+      <p class="sub">The same loop runs under every app above — and under the products I lead at work. Tight cycles, real evidence, no wasted builds.</p>
+    </div>
+
+    <div class="loop-wrap">
+      <div class="loop reveal" id="loop">
+        <div class="ring">
+          <svg viewBox="0 0 400 400">
+            <circle cx="200" cy="200" r="150" fill="none" stroke="var(--line)" stroke-width="1.5"/>
+            <circle id="loop-arc" cx="200" cy="200" r="150" fill="none" stroke="var(--sage-dark)" stroke-width="3" stroke-linecap="round"
+              stroke-dasharray="235 707" transform="rotate(-90 200 200)"/>
+          </svg>
+        </div>
+        <div class="node n0" style="left:50%; top:5%;"><div class="bub">◔</div><div class="lab">Build</div></div>
+        <div class="node n1" style="left:90%; top:62%;"><div class="bub">◑</div><div class="lab">Measure</div></div>
+        <div class="node n2" style="left:10%; top:62%;"><div class="bub">◕</div><div class="lab">Learn</div></div>
+        <div class="center"><div class="pmf">Product<br>Market Fit<small>the goal</small></div></div>
+      </div>
+
+      <div class="loop-steps reveal d1">
+        <div class="ls active" data-step="0"><span class="si">01</span><div><h4>Build the smallest test</h4><p>An MVP that isolates one risky assumption — the fastest honest version of the idea.</p></div></div>
+        <div class="ls" data-step="1"><span class="si">02</span><div><h4>Measure real behaviour</h4><p>Ship it to real users and watch what they do, not what they say. Signups, retention, the drop-offs.</p></div></div>
+        <div class="ls" data-step="2"><span class="si">03</span><div><h4>Learn &amp; decide</h4><p>Double down, pivot, or kill it. Evidence decides the next loop — and each loop gets you closer to fit.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CONTACT ============================ -->
+<section class="contact" id="contact" style="--accent:var(--terra);">
+  <div class="wrap">
+    <div class="kicker reveal" style="justify-content:center;"><span class="idx">04</span> Let's build</div>
+    <h2 class="reveal" style="margin-top:20px;">Got an idea that needs<br>a <span class="em">market</span>?</h2>
+    <p class="sub reveal d1">I'm Matteo Trachsel — Head of Business Innovation &amp; Sustainability, looking to drive innovation projects from idea to product-market fit. Let's talk.</p>
+    <a class="mail reveal d1" href="mailto:matteo.trachsel@gmail.com">matteo.trachsel@gmail.com</a>
+    <div class="social reveal d2">
+      <a href="https://www.linkedin.com/in/matteotrachsel" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="tel:+41795115788">+41 79 511 57 88</a>
+      <a href="https://report.thermoplan.ch/" target="_blank" rel="noopener">Selected project ↗</a>
+    </div>
+  </div>
+  <div class="foot">
+    <span>© 2026 Matteo Trachsel</span>
+    <span>Built lean — designed &amp; coded by hand</span>
+  </div>
+</section>
+
+<script src="portfolio.js"></script>
+</body>
+</html>
