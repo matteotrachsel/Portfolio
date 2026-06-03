@@ -56,12 +56,12 @@
     var ctx = canvas.getContext('2d');
     var dpr = Math.min(window.devicePixelRatio || 1, 2);
 
-    // Brand accent palette (sage, terracotta, sky, lilac) for the live web.
+    // Refined near-monochrome palette: a single sage accent + soft neutrals.
     var PAL = [
-      [124, 184, 160],
-      [232, 168, 124],
-      [107, 174, 214],
-      [196, 155, 212]
+      [90, 154, 130],   // sage-dark accent
+      [124, 184, 160],  // sage
+      [120, 128, 128],  // warm grey
+      [150, 158, 156]   // light grey
     ];
     var INK = [45, 52, 54];
 
