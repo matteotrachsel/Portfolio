@@ -347,7 +347,7 @@
   }
 
   /* ---- Active nav link highlight -------------------------------------- */
-  var sections = ['thesis', 'work', 'process', 'contact']
+  var sections = ['thesis', 'work', 'process', 'model', 'contact']
     .map(function (id) { return document.getElementById(id); })
     .filter(Boolean);
   var navLinks = {};
