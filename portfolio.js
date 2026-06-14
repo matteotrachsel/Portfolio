@@ -311,43 +311,8 @@
     });
   });
 
-  /* ---- Process loop: rotate active node + arc on scroll/timer ---------- */
-  var loop = document.getElementById('loop');
-  if (loop) {
-    var nodes = loop.querySelectorAll('.node');
-    var steps = document.querySelectorAll('.loop-steps .ls');
-    var arc = document.getElementById('loop-arc');
-    var circ = 2 * Math.PI * 150; // r=150
-    var cur = 0, timer = null;
-    function setStep(i) {
-      cur = i % 3;
-      nodes.forEach(function (n, idx) { n.classList.toggle('active', idx === cur); });
-      steps.forEach(function (s, idx) { s.classList.toggle('active', idx === cur); });
-      if (arc && !reduce) {
-        // arc sweeps to the active node (each node 120deg apart)
-        var seg = circ / 3;
-        arc.style.transition = 'stroke-dasharray .7s cubic-bezier(.6,0,.2,1)';
-        arc.setAttribute('stroke-dasharray', (seg * (cur + 1)) + ' ' + circ);
-      }
-    }
-    setStep(0);
-    function startLoop() { if (timer || reduce) return; timer = setInterval(function () { setStep(cur + 1); }, 2400); }
-    function stopLoop() { clearInterval(timer); timer = null; }
-    if ('IntersectionObserver' in window) {
-      var lo = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) { if (e.isIntersecting) startLoop(); else stopLoop(); });
-      }, { threshold: 0.4 });
-      lo.observe(loop);
-    } else { startLoop(); }
-    // let users scrub by hovering steps
-    steps.forEach(function (s, idx) {
-      s.addEventListener('mouseenter', function () { stopLoop(); setStep(idx); });
-      s.addEventListener('mouseleave', function () { startLoop(); });
-    });
-  }
-
   /* ---- Active nav link highlight -------------------------------------- */
-  var sections = ['thesis', 'work', 'process', 'model', 'contact']
+  var sections = ['thesis', 'work', 'model', 'contact']
     .map(function (id) { return document.getElementById(id); })
     .filter(Boolean);
   var navLinks = {};

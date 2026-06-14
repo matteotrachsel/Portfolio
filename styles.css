@@ -315,38 +315,6 @@ h1, h2, h3 { font-weight: 700; margin: 0; letter-spacing: -0.025em; }
 .card .card-foot .open .ar { transition: transform .25s; }
 .card:hover .card-foot .open .ar { transform: translate(3px,-3px); }
 
-/* ====================== PROCESS LOOP =================================== */
-.process { padding: clamp(80px,12vh,150px) 0; background:
-  linear-gradient(180deg, transparent, color-mix(in srgb, var(--sand) 30%, transparent) 40%, transparent);
-}
-.loop-wrap { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(40px,6vw,90px); align-items: center; margin-top: 60px; }
-@media (max-width: 920px){ .loop-wrap { grid-template-columns: 1fr; } }
-
-.loop { position: relative; width: min(440px, 92%); aspect-ratio: 1; margin: 0 auto; }
-.loop .ring { position: absolute; inset: 0; }
-.loop svg { width: 100%; height: 100%; overflow: visible; }
-.loop .node {
-  position: absolute; width: 132px; transform: translate(-50%,-50%); text-align: center;
-}
-.loop .node .bub {
-  width: 96px; height: 96px; border-radius: 50%; margin: 0 auto 12px; display: grid; place-items: center;
-  background: var(--surface); border: 1px solid var(--line); box-shadow: 0 16px 30px -18px rgba(45,52,54,.35);
-  font-size: 30px; color: var(--accent); transition: transform .4s, box-shadow .4s;
-}
-.loop .node.active .bub { transform: scale(1.1); box-shadow: 0 22px 40px -16px color-mix(in srgb, var(--accent) 50%, transparent); border-color: var(--accent); }
-.loop .node .lab { font-family: var(--mono); font-weight: 600; font-size: 11.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink); }
-.loop .center { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; pointer-events: none; }
-.loop .center .pmf { font-family: var(--serif); font-weight: 700; font-size: 21px; letter-spacing: -.02em; line-height: 1.08; color: var(--ink); }
-.loop .center .pmf small { display:block; font-family: var(--mono); font-weight: 500; font-size: 10px; letter-spacing:.14em; text-transform:uppercase; color: var(--muted); margin-top: 6px; }
-
-.loop-steps { display: flex; flex-direction: column; gap: 4px; }
-.loop-steps .ls { padding: 22px 0; border-bottom: 1px solid var(--line-soft); display: grid; grid-template-columns: 54px 1fr; gap: 18px; cursor: default; transition: opacity .3s; }
-.loop-steps .ls .si { font-family: var(--mono); font-weight: 600; font-size: 13px; color: var(--accent); }
-.loop-steps .ls h4 { font-family: var(--serif); font-weight: 700; font-size: 23px; letter-spacing: -.02em; margin: 0 0 6px; }
-.loop-steps .ls p { margin: 0; color: var(--ink-soft); font-size: 15px; }
-.loop-steps .ls.active { opacity: 1; }
-.loop-steps .ls:not(.active) { opacity: .42; }
-
 /* ====================== PRODUCT OPERATING MODEL ======================= */
 .pom { padding: clamp(80px,12vh,150px) 0; }
 .pom-grid {
