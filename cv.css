@@ -97,7 +97,7 @@
 .xp.dimmed { opacity: .32; filter: saturate(.5); }
 .xp.hidden { display: none; }
 .xp-head {
-  display: grid; grid-template-columns: auto 1fr auto auto; align-items: center; gap: 16px;
+  display: grid; grid-template-columns: 140px 1fr auto auto; align-items: center; gap: 16px;
   padding: 22px 24px; cursor: pointer; user-select: none;
 }
 .xp-logo {
@@ -128,7 +128,7 @@
 .xp-body li b { color: var(--ink); font-weight: 600; }
 .xp-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
 @media (max-width: 620px){
-  .xp-head { grid-template-columns: auto 1fr auto; }
+  .xp-head { grid-template-columns: 92px 1fr auto; }
   .xp-date { grid-column: 1 / -1; order: 3; }
   .xp-logo { width: 92px; }
   .xp-logo img { max-width: 88px; }
