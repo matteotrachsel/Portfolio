@@ -5,6 +5,10 @@
 
 .em { color: var(--sage-dark); font-weight: 700; }
 
+/* Text selection in Swiss Post yellow (CV page only) */
+::selection { background: #FFCC00; color: #1A1C1D; }
+::-moz-selection { background: #FFCC00; color: #1A1C1D; }
+
 /* ====================== STICKY NAV ===================================== */
 .cv-nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 60;
