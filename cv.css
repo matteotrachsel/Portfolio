@@ -49,7 +49,9 @@
 .cv-role { margin-top: 22px; font-family: var(--serif); font-weight: 600; font-size: clamp(20px, 3vw, 32px); line-height: 1.18; letter-spacing: -.02em; max-width: 24ch; color: var(--ink); }
 .cv-lede { margin-top: 22px; max-width: 64ch; font-size: clamp(16px, 1.8vw, 19px); color: var(--ink-soft); line-height: 1.6; }
 .cv-lede b, .cv-role .em { font-weight: 700; }
-.cv-actions { margin-top: 34px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+.cv-meta { margin-top: 20px; display: inline-flex; align-items: center; gap: 9px; font-family: var(--mono); font-weight: 500; font-size: 13px; letter-spacing: .02em; color: var(--ink-soft); }
+.cv-meta .pin { width: 8px; height: 8px; border-radius: 50%; background: var(--sage-dark); box-shadow: 0 0 0 3px color-mix(in srgb, var(--sage) 28%, transparent); flex: none; }
+.cv-actions { margin-top: 28px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
 .btn .arrow { transition: transform .25s; }
 .btn:hover .arrow { transform: translate(3px,-3px); }
 
