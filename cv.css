@@ -9,6 +9,14 @@
 ::selection { background: #FFCC00; color: #1A1C1D; }
 ::-moz-selection { background: #FFCC00; color: #1A1C1D; }
 
+/* Section labels highlighted in Swiss Post yellow */
+.kicker {
+  background: #FFCC00; color: #1A1C1D;
+  padding: 6px 12px; border-radius: 6px;
+}
+.kicker::before { display: none; }
+.kicker .idx { color: #1A1C1D; font-weight: 700; }
+
 /* ====================== STICKY NAV ===================================== */
 .cv-nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 60;
