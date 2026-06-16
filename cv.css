@@ -111,12 +111,14 @@
   padding: 22px 24px; cursor: pointer; user-select: none;
 }
 .xp-logo {
-  position: relative; width: 46px; height: 46px; flex: none; border-radius: 11px;
-  background: var(--bg-warm); border: 1px solid var(--line);
-  display: grid; place-items: center; overflow: hidden;
+  position: relative; display: flex; align-items: center; height: 46px; flex: none;
 }
-.xp-logo .mono { font-family: var(--serif); font-weight: 700; font-size: 18px; letter-spacing: -.02em; color: var(--ink); }
-.xp-logo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; padding: 7px; background: #fff; }
+.xp-logo .mono {
+  width: 46px; height: 46px; border-radius: 11px; background: var(--bg-warm); border: 1px solid var(--line);
+  display: grid; place-items: center; font-family: var(--serif); font-weight: 700; font-size: 18px; letter-spacing: -.02em; color: var(--ink);
+}
+.xp-logo img { height: 32px; width: auto; max-width: 132px; object-fit: contain; display: block; }
+.xp-logo.has-logo .mono { display: none; }
 .xp-title h3 { font-family: var(--serif); font-weight: 700; font-size: 21px; letter-spacing: -.02em; margin: 0 0 3px; }
 .xp-title .xp-org { font-size: 14px; color: var(--sage-dark); font-weight: 600; }
 .xp-date { font-family: var(--mono); font-weight: 500; font-size: 12px; letter-spacing: .04em; color: var(--muted); white-space: nowrap; }

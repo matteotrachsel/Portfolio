@@ -254,6 +254,13 @@
     head.addEventListener('click', function () { head.parentElement.classList.toggle('open'); });
   });
 
+  /* ---- Company logos: reveal real logo, else keep monogram ------------ */
+  [].forEach.call(document.querySelectorAll('.xp-logo img'), function (img) {
+    function ok() { img.parentElement.classList.add('has-logo'); }
+    if (img.complete && img.naturalWidth) ok();
+    else img.addEventListener('load', ok);
+  });
+
   /* ---- Experience theme filter ---------------------------------------- */
   var chips = [].slice.call(document.querySelectorAll('#filterBar .chip'));
   var xps = [].slice.call(document.querySelectorAll('#xpList .xp'));
