@@ -146,11 +146,18 @@
 @media (max-width: 900px){ .proj-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 480px){ .proj-grid { grid-template-columns: 1fr; } }
 .proj {
-  display: flex; flex-direction: column; gap: 10px;
-  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
-  padding: 22px 22px 24px; transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s, border-color .35s;
+  display: flex; flex-direction: column;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;
+  transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s, border-color .35s;
 }
 .proj:hover { transform: translateY(-5px); box-shadow: 0 24px 50px -34px rgba(45,52,54,.45); border-color: color-mix(in srgb, var(--sage) 45%, var(--line)); }
+.proj-shot { position: relative; aspect-ratio: 16 / 10; background: var(--bg-warm); border-bottom: 1px solid var(--line); overflow: hidden; }
+.proj-shot .frame-holder { position: absolute; inset: 0; }
+.proj-shot .frame-holder iframe { border: 0; display: block; pointer-events: none; opacity: 0; transition: opacity .6s ease; }
+.proj-shot .frame-holder.loaded iframe { opacity: 1; }
+.proj-poster { position: absolute; inset: 0; display: grid; place-items: center; color: #fff; font-family: var(--serif); font-weight: 700; font-size: 30px; letter-spacing: -.02em; pointer-events: none; transition: opacity .5s ease; }
+.proj-shot .frame-holder.loaded .proj-poster { opacity: 0; }
+.proj-info { padding: 18px 22px 22px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
 .proj-top { display: flex; align-items: center; justify-content: space-between; }
 .proj-name { font-family: var(--serif); font-weight: 700; font-size: 22px; letter-spacing: -.02em; }
 .proj-ar { color: var(--muted); transition: transform .25s, color .25s; }
@@ -212,5 +219,6 @@
   .xp.dimmed, .xp.hidden { opacity: 1 !important; filter: none !important; display: block !important; }
   .bar i { width: var(--v) !important; }
   .fit-card, .xp, .proj, .edu { break-inside: avoid; box-shadow: none !important; border-color: #ccc; }
+  .proj-shot { display: none !important; }
   a { color: #000; text-decoration: none; }
 }

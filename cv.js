@@ -261,6 +261,49 @@
     else img.addEventListener('load', ok);
   });
 
+  /* ---- Live app previews (section 03) --------------------------------- */
+  var shotHolders = [].slice.call(document.querySelectorAll('.proj-shot .frame-holder'));
+  function fitShot(holder, iframe) {
+    var w = parseFloat(holder.getAttribute('data-w'));
+    if (!w) { iframe.style.width = '100%'; iframe.style.height = '100%'; return; }
+    iframe.style.transformOrigin = 'top left';
+    function size() {
+      var cw = holder.clientWidth, ch = holder.clientHeight;
+      if (!cw || !ch) return;
+      var scale = cw / w;
+      iframe.style.width = w + 'px';
+      iframe.style.height = Math.ceil(ch / scale) + 'px';
+      iframe.style.transform = 'scale(' + scale + ')';
+    }
+    size();
+    if ('ResizeObserver' in window) { new ResizeObserver(size).observe(holder); }
+    else { window.addEventListener('resize', size); }
+  }
+  function loadShot(holder) {
+    if (holder.dataset.loaded) return;
+    holder.dataset.loaded = '1';
+    var iframe = document.createElement('iframe');
+    iframe.setAttribute('loading', 'lazy');
+    iframe.setAttribute('title', 'Live preview');
+    iframe.setAttribute('referrerpolicy', 'no-referrer');
+    iframe.setAttribute('scrolling', 'no');
+    iframe.setAttribute('tabindex', '-1');
+    iframe.setAttribute('aria-hidden', 'true');
+    iframe.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-popups');
+    var done = false;
+    iframe.addEventListener('load', function () { done = true; holder.classList.add('loaded'); });
+    setTimeout(function () { if (!done) holder.classList.add('loaded'); }, 4500);
+    iframe.src = holder.getAttribute('data-src');
+    holder.insertBefore(iframe, holder.firstChild);
+    fitShot(holder, iframe);
+  }
+  if (hasIO) {
+    var po = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { loadShot(e.target); po.unobserve(e.target); } });
+    }, { rootMargin: '300px 0px' });
+    shotHolders.forEach(function (h) { po.observe(h); });
+  } else { shotHolders.forEach(loadShot); }
+
   /* ---- Print / Download PDF ------------------------------------------- */
   var printBtn = document.getElementById('printBtn');
   if (printBtn) {
