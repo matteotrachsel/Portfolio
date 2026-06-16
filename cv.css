@@ -113,6 +113,7 @@
 .xp-title h3 { font-family: var(--serif); font-weight: 700; font-size: 21px; letter-spacing: -.02em; margin: 0 0 3px; }
 .xp-title .xp-org { font-size: 14px; color: var(--sage-dark); font-weight: 600; }
 .xp-date { font-family: var(--mono); font-weight: 500; font-size: 12px; letter-spacing: .04em; color: var(--muted); white-space: nowrap; }
+.xp-date .dur { color: var(--sage-dark); }
 .xp-toggle { font-size: 22px; color: var(--muted); width: 22px; text-align: center; transition: transform .3s, color .3s; }
 .xp.open .xp-toggle { transform: rotate(45deg); color: var(--sage-dark); }
 .xp-body {
