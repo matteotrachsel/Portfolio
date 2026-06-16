@@ -101,7 +101,7 @@
   padding: 22px 24px; cursor: pointer; user-select: none;
 }
 .xp-logo {
-  position: relative; display: flex; align-items: center; justify-content: flex-start;
+  position: relative; display: flex; align-items: center; justify-content: center;
   width: 140px; height: 46px; flex: none;
 }
 .xp-logo .mono {
