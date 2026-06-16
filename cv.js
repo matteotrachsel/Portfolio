@@ -52,6 +52,141 @@
     }
   }
 
+  /* ---- Interactive hero dot field (same mesh as the portfolio) -------- */
+  (function dotField() {
+    var canvas = document.getElementById('dotField');
+    if (!canvas) return;
+    var hero = canvas.parentElement;
+    var ctx = canvas.getContext('2d');
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+    // Refined near-monochrome palette: a single sage accent + soft neutrals.
+    var PAL = [
+      [90, 154, 130],   // sage-dark accent
+      [124, 184, 160],  // sage
+      [120, 128, 128],  // warm grey
+      [150, 158, 156]   // light grey
+    ];
+    var INK = [45, 52, 54];
+
+    var SPACING = 40, REPEL = 130, LINK = 150;
+    var dots = [], cols = 0, rows = 0, W = 0, H = 0;
+    var mouse = { x: -9999, y: -9999, active: false };
+    var running = false, raf = 0;
+
+    function build() {
+      var r = hero.getBoundingClientRect();
+      W = r.width; H = r.height;
+      canvas.width = Math.round(W * dpr);
+      canvas.height = Math.round(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      cols = Math.ceil(W / SPACING) + 1;
+      rows = Math.ceil(H / SPACING) + 1;
+      dots = [];
+      var ox = (W - (cols - 1) * SPACING) / 2;
+      var oy = (H - (rows - 1) * SPACING) / 2;
+      for (var iy = 0; iy < rows; iy++) {
+        for (var ix = 0; ix < cols; ix++) {
+          var hx = ox + ix * SPACING, hy = oy + iy * SPACING;
+          dots.push({ hx: hx, hy: hy, x: hx, y: hy, col: PAL[(ix + iy * 2) % PAL.length], ph: Math.random() * Math.PI * 2, sp: 0.4 + Math.random() * 0.6 });
+        }
+      }
+    }
+    function lerp(a, b, t) { return a + (b - a) * t; }
+
+    function draw(time) {
+      raf = 0;
+      ctx.clearRect(0, 0, W, H);
+      var t = time * 0.001;
+      for (var i = 0; i < dots.length; i++) {
+        var d = dots[i];
+        var tx = d.hx + Math.cos(t * d.sp + d.ph) * 3, ty = d.hy + Math.sin(t * d.sp * 0.9 + d.ph) * 3;
+        if (mouse.active) {
+          var vx = tx - mouse.x, vy = ty - mouse.y, dist = Math.sqrt(vx * vx + vy * vy);
+          if (dist < REPEL && dist > 0.001) {
+            var push = (1 - dist / REPEL), force = push * push * 26;
+            tx += (vx / dist) * force; ty += (vy / dist) * force;
+          }
+        }
+        d.x = lerp(d.x, tx, 0.18); d.y = lerp(d.y, ty, 0.18);
+        d.t = 0;
+        if (mouse.active) {
+          var mdx = d.x - mouse.x, mdy = d.y - mouse.y, md = Math.sqrt(mdx * mdx + mdy * mdy);
+          d.t = md < REPEL ? (1 - md / REPEL) : 0;
+        }
+      }
+      if (mouse.active) {
+        for (var j = 0; j < dots.length; j++) {
+          var a = dots[j];
+          if (a.t <= 0.05) continue;
+          var right = (j % cols !== cols - 1) ? dots[j + 1] : null;
+          var down = (j + cols < dots.length) ? dots[j + cols] : null;
+          [right, down].forEach(function (b) {
+            if (!b || b.t <= 0.05) return;
+            var lx = a.x - b.x, ly = a.y - b.y, ld = Math.sqrt(lx * lx + ly * ly);
+            if (ld > LINK) return;
+            var alpha = Math.min(a.t, b.t) * (1 - ld / LINK) * 0.5;
+            ctx.strokeStyle = 'rgba(' + a.col[0] + ',' + a.col[1] + ',' + a.col[2] + ',' + alpha.toFixed(3) + ')';
+            ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+          });
+        }
+      }
+      for (var k = 0; k < dots.length; k++) {
+        var p = dots[k];
+        var rad = lerp(1.1, 3.4, p.t), alpha = lerp(0.16, 0.95, p.t);
+        var c = [Math.round(lerp(INK[0], p.col[0], p.t)), Math.round(lerp(INK[1], p.col[1], p.t)), Math.round(lerp(INK[2], p.col[2], p.t))];
+        if (p.t > 0.35) {
+          ctx.beginPath();
+          ctx.fillStyle = 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',' + (p.t * 0.12).toFixed(3) + ')';
+          ctx.arc(p.x, p.y, rad * 3.2, 0, Math.PI * 2); ctx.fill();
+        }
+        ctx.beginPath();
+        ctx.fillStyle = 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',' + alpha.toFixed(3) + ')';
+        ctx.arc(p.x, p.y, rad, 0, Math.PI * 2); ctx.fill();
+      }
+      if (running) raf = requestAnimationFrame(draw);
+    }
+    function startField() { if (!running) { running = true; raf = requestAnimationFrame(draw); } }
+    function stopField() { running = false; if (raf) cancelAnimationFrame(raf); raf = 0; }
+
+    window.addEventListener('mousemove', function (e) {
+      var r = canvas.getBoundingClientRect();
+      mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top;
+      mouse.active = mouse.y > -REPEL && mouse.y < H + REPEL;
+    }, { passive: true });
+    window.addEventListener('mouseout', function () { mouse.active = false; });
+    window.addEventListener('touchmove', function (e) {
+      if (!e.touches[0]) return;
+      var r = canvas.getBoundingClientRect();
+      mouse.x = e.touches[0].clientX - r.left; mouse.y = e.touches[0].clientY - r.top; mouse.active = true;
+    }, { passive: true });
+    window.addEventListener('touchend', function () { mouse.active = false; });
+
+    var rsz;
+    window.addEventListener('resize', function () { clearTimeout(rsz); rsz = setTimeout(build, 150); }, { passive: true });
+    if ('ResizeObserver' in window) {
+      var lastW = 0, lastH = 0;
+      new ResizeObserver(function (entries) {
+        var cr = entries[0].contentRect;
+        if (Math.abs(cr.width - lastW) > 1 || Math.abs(cr.height - lastH) > 1) { lastW = cr.width; lastH = cr.height; build(); }
+      }).observe(hero);
+    }
+
+    build();
+    if (reduce) {
+      ctx.clearRect(0, 0, W, H);
+      for (var s = 0; s < dots.length; s++) { ctx.beginPath(); ctx.fillStyle = 'rgba(45,52,54,0.14)'; ctx.arc(dots[s].hx, dots[s].hy, 1.3, 0, Math.PI * 2); ctx.fill(); }
+      return;
+    }
+    draw(performance.now());
+    if (hasIO) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { e.isIntersecting ? startField() : stopField(); });
+      }, { threshold: 0 });
+      io.observe(hero);
+    } else { startField(); }
+  })();
+
   /* ---- Count-up stats -------------------------------------------------- */
   function runCount(el) {
     var target = parseFloat(el.getAttribute('data-count'));
