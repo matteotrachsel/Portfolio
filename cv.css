@@ -88,16 +88,6 @@
 }
 .fit-card.open .fit-a { max-height: 360px; opacity: 1; margin-top: 14px; }
 
-/* ====================== FILTER BAR ===================================== */
-.filter-bar { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
-.chip {
-  font-family: var(--mono); font-weight: 600; font-size: 12px; letter-spacing: .03em; cursor: pointer;
-  padding: 9px 16px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink-soft);
-  transition: background .25s, color .25s, border-color .25s, transform .2s;
-}
-.chip:hover { border-color: var(--sage); transform: translateY(-1px); }
-.chip.active { background: var(--ink); color: var(--bg); border-color: var(--ink); }
-
 /* ====================== EXPERIENCE ===================================== */
 .xp-list { display: flex; flex-direction: column; gap: 14px; }
 .xp {

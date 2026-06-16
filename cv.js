@@ -261,21 +261,6 @@
     else img.addEventListener('load', ok);
   });
 
-  /* ---- Experience theme filter ---------------------------------------- */
-  var chips = [].slice.call(document.querySelectorAll('#filterBar .chip'));
-  var xps = [].slice.call(document.querySelectorAll('#xpList .xp'));
-  chips.forEach(function (chip) {
-    chip.addEventListener('click', function () {
-      chips.forEach(function (c) { c.classList.remove('active'); });
-      chip.classList.add('active');
-      var f = chip.getAttribute('data-filter');
-      xps.forEach(function (xp) {
-        var match = f === 'all' || (xp.getAttribute('data-themes') || '').indexOf(f) !== -1;
-        xp.classList.toggle('hidden', !match);
-      });
-    });
-  });
-
   /* ---- Print / Download PDF ------------------------------------------- */
   var printBtn = document.getElementById('printBtn');
   if (printBtn) {
