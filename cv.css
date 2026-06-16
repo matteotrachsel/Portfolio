@@ -101,7 +101,8 @@
   padding: 22px 24px; cursor: pointer; user-select: none;
 }
 .xp-logo {
-  position: relative; display: flex; align-items: center; height: 46px; flex: none;
+  position: relative; display: flex; align-items: center; justify-content: flex-start;
+  width: 140px; height: 46px; flex: none;
 }
 .xp-logo .mono {
   width: 46px; height: 46px; border-radius: 11px; background: var(--bg-warm); border: 1px solid var(--line);
@@ -129,6 +130,8 @@
 @media (max-width: 620px){
   .xp-head { grid-template-columns: auto 1fr auto; }
   .xp-date { grid-column: 1 / -1; order: 3; }
+  .xp-logo { width: 92px; }
+  .xp-logo img { max-width: 88px; }
 }
 
 /* ====================== AI PROJECTS ==================================== */
