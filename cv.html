@@ -5,390 +5,515 @@
   Reuses the portfolio design system (Inter, warm-minimal, sage accent).
 -->
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Matteo Trachsel — CV · Senior Everyday AI Specialist</title>
-<meta name="description" content="Interactive CV of Matteo Trachsel — tailored application for Senior Everyday AI Specialist at Swiss Post. Hands-on AI builder, innovation lead, product-market-fit specialist.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="cv.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Matteo Trachsel — CV · Senior Everyday AI Specialist</title>
+  <meta name="description"
+    content="Interactive CV of Matteo Trachsel — tailored application for Senior Everyday AI Specialist at Swiss Post. Hands-on AI builder, innovation lead, product-market-fit specialist.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="cv.css">
 </head>
+
 <body>
-<script>document.body.classList.add('js');</script>
-<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <script>document.body.classList.add('js');</script>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-<div class="bg-field" aria-hidden="true">
-  <div class="bloom b1"></div>
-  <div class="bloom b2"></div>
-  <div class="bloom b3"></div>
-  <div class="grain"></div>
-</div>
-
-<!-- ===================== STICKY SECTION NAV ===================== -->
-<nav class="cv-nav" id="cvNav">
-  <a class="cv-brand" href="index.html"><span class="mark">M</span><span>Matteo Trachsel</span></a>
-  <div class="cv-links">
-    <a href="#fit">Fit</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">AI&nbsp;projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#education">Education</a>
+  <div class="bg-field" aria-hidden="true">
+    <div class="bloom b1"></div>
+    <div class="bloom b2"></div>
+    <div class="bloom b3"></div>
+    <div class="grain"></div>
   </div>
-  <button class="cv-print" id="printBtn" type="button">Download PDF <span aria-hidden="true">↓</span></button>
-</nav>
 
-<!-- ===================== HERO ===================== -->
-<header class="cv-hero" id="top">
-  <canvas class="dot-field" id="dotField" aria-hidden="true"></canvas>
-  <div class="wrap">
-    <span class="cv-eyebrow"><span class="dot"></span>Application · Senior Everyday AI Specialist · <span class="post">Swiss Post</span> <span class="ref">Ref. 73495</span></span>
-    <h1 class="split">Matteo&nbsp;Trachsel</h1>
-    <p class="cv-role">Product manager &amp; hands-on AI builder — I turn AI capability into <span class="em">everyday value</span>.</p>
-    <p class="cv-lede">For nine years I've translated real needs into shipped products — from IoT hardware to a portfolio of AI apps (GPT agents, computer vision, automation), and today as a product manager at Ypsomed. I lead projects from idea to product-market fit, align stakeholders across an organisation, and make complex technology tangible for the people who use it. Exactly the loop <span class="post">Swiss Post</span> needs to take Microsoft&nbsp;365 Copilot from rollout to lasting adoption.</p>
-
-    <p class="cv-meta"><span class="pin" aria-hidden="true"></span>Based in Bern</p>
-
-    <div class="cv-actions">
-      <a class="btn btn-primary" href="mailto:matteo.trachsel@gmail.com?subject=Senior%20Everyday%20AI%20Specialist%20(Ref.%2073495)">Get in touch <span class="arrow">↗</span></a>
-      <a class="btn btn-ghost" href="https://www.linkedin.com/in/matteotrachsel" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="btn btn-ghost" href="index.html">View portfolio</a>
+  <!-- ===================== STICKY SECTION NAV ===================== -->
+  <nav class="cv-nav" id="cvNav">
+    <a class="cv-brand" href="index.html"><span class="mark">M</span><span>Matteo Trachsel</span></a>
+    <div class="cv-links">
+      <a href="#fit">Fit</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">AI&nbsp;projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
     </div>
-  </div>
-</header>
+    <button class="cv-print" id="printBtn" type="button">Download PDF <span aria-hidden="true">↓</span></button>
+  </nav>
 
-<!-- ===================== WHY I FIT ===================== -->
-<section class="cv-sec" id="fit">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="kicker"><span class="idx">01</span> Why I fit this role</div>
-      <h2>Your requirements, my evidence.</h2>
-      <p class="sub">Mapped one-to-one to the job description. Tap a card to see the proof.</p>
-    </div>
+  <!-- ===================== HERO ===================== -->
+  <header class="cv-hero" id="top">
+    <canvas class="dot-field" id="dotField" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <span class="cv-eyebrow"><span class="dot"></span>Application · Senior Everyday AI Specialist · <span
+          class="post">Swiss Post</span> <span class="ref">Ref. 73495</span></span>
+      <h1 class="split">Matteo&nbsp;Trachsel</h1>
+      <p class="cv-role">Product manager &amp; hands-on AI builder — I turn AI capability into <span class="em">everyday
+          value</span>.</p>
+      <p class="cv-lede">For nine years I've translated real needs into shipped products — from IoT hardware to a
+        portfolio of AI apps (GPT agents, computer vision, automation) and today as a product manager at Ypsomed. I lead
+        projects from idea to product-market fit, align stakeholders across an organisation and make complex technology
+        tangible for the people who use it. Exactly the loop <span class="post">Swiss Post</span> needs to take
+        Microsoft&nbsp;365 Copilot from rollout to lasting adoption.</p>
 
-    <div class="fit-grid" data-stagger>
-      <button class="fit-card reveal" type="button">
-        <div class="fit-q"><span class="qn">01</span>Understand the real job-to-be-done behind every everyday-AI need</div>
-        <div class="fit-a">Everyday AI only creates value when it serves a real job-to-be-done. I start by uncovering what people are actually trying to accomplish — not the feature they ask for — then translate that into the right AI use case. It's the method behind 8+ shipped AI products (Ikigai, NaiS, Sigmascope) that solved genuine needs.</div>
-      </button>
-      <button class="fit-card reveal" type="button">
-        <div class="fit-q"><span class="qn">02</span>Lead sub-projects &amp; work streams to goals, quality and impact</div>
-        <div class="fit-a">I led the CHF 8.1M Innosuisse "Circulus" programme and built Thermoplan's Business Innovation Center from zero — owning delivery end-to-end, from idea to product-market fit and hand-off to R&amp;D.</div>
-      </button>
-      <button class="fit-card reveal" type="button">
-        <div class="fit-q"><span class="qn">03</span>Coordinate stakeholders across IT, specialist units, HR &amp; governance</div>
-        <div class="fit-a">As Head of Sustainability I aligned a complex, company-wide stakeholder landscape and built a cross-departmental leadership team using Scrum — harmonising technical, business and governance goals.</div>
-      </button>
-      <div class="fit-card reveal" role="button" tabindex="0">
-        <div class="fit-q"><span class="qn">04</span>Design &amp; run workshops, trainings and events — online &amp; on-site</div>
-        <div class="fit-a">Facilitation is part of my toolkit: Design Thinking &amp; Value Proposition workshops, an öbu SBTi webinar, and accelerator pitches. I make complex topics understandable for any audience.
-          <span class="fit-links">
-            <a href="https://sustainableswitzerland.ch/artikel/klimaschutz-unternehmen-ueberholen-die-politik-id.1279" target="_blank" rel="noopener" onclick="event.stopPropagation()">Sustainable Switzerland — Klimaschutz ↗</a>
-            <a href="https://youtu.be/KG-DGkoCGPc?si=GpdCr8rZWnBxoh1z&amp;t=1601" target="_blank" rel="noopener" onclick="event.stopPropagation()">öbu-Impuls — webinar ↗</a>
-            <a href="https://www.swiss-medtech.ch/sites/default/files/2023-06/SMD23_Matteo_Trachsel_Slides.pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Medtech Day 2023 — presentation ↗</a>
-          </span>
-        </div>
+      <p class="cv-meta"><span class="pin" aria-hidden="true"></span>Based in Bern</p>
+
+      <div class="cv-actions">
+        <a class="btn btn-primary"
+          href="mailto:matteo.trachsel@gmail.com?subject=Senior%20Everyday%20AI%20Specialist%20(Ref.%2073495)">Get in
+          touch <span class="arrow">↗</span></a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/matteotrachsel" target="_blank"
+          rel="noopener">LinkedIn</a>
+        <a class="btn btn-ghost" href="index.html">View portfolio</a>
       </div>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- ===================== EXPERIENCE ===================== -->
-<section class="cv-sec" id="experience">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="kicker"><span class="idx">02</span> Experience</div>
-      <h2>From engineering to AI-led innovation.</h2>
-      <p class="sub">Click any role to expand the detail.</p>
-    </div>
-
-    <div class="xp-list" id="xpList">
-
-      <article class="xp reveal open" data-themes="innovation leadership">
-        <header class="xp-head">
-          <div class="xp-logo"><img src="assets/logos/ypsomed.png" alt="Ypsomed logo" loading="lazy" onerror="this.remove()"><span class="mono">Y</span></div>
-          <div class="xp-title">
-            <h3>Product Manager — Autoinjectors</h3>
-            <span class="xp-org">Ypsomed AG</span>
-          </div>
-          <span class="xp-date">02.2026 – present <span class="dur">(5 mos)</span></span>
-          <span class="xp-toggle" aria-hidden="true">+</span>
-        </header>
-        <div class="xp-body">
-          <p class="xp-sum">Product manager for self-injection devices (autoinjectors) at Ypsomed — a leading Swiss medical-technology company in drug-delivery systems.</p>
-          <ul>
-            <li><b>Product ownership:</b> Drive the product lifecycle of autoinjector platforms in close collaboration with R&amp;D, quality, regulatory and supply chain.</li>
-            <li><b>User-centric:</b> Translate patient and pharma-partner needs into clear product requirements — bringing the same validate-fast, evidence-led approach to a regulated MedTech environment.</li>
-          </ul>
-          <div class="xp-tags"><span class="tag">Product management</span><span class="tag">MedTech</span><span class="tag">Cross-functional</span></div>
-        </div>
-      </article>
-
-      <article class="xp reveal open" data-themes="innovation leadership ai">
-        <header class="xp-head">
-          <div class="xp-logo"><img src="assets/logos/thermoplan.webp" alt="Thermoplan logo" loading="lazy" onerror="this.remove()"><span class="mono">T</span></div>
-          <div class="xp-title">
-            <h3>Head of Business Innovation &amp; Sustainability</h3>
-            <span class="xp-org">Thermoplan AG</span>
-          </div>
-          <span class="xp-date">06.2024 – 01.2026 <span class="dur">(1 yr 8 mos)</span></span>
-          <span class="xp-toggle" aria-hidden="true">+</span>
-        </header>
-        <div class="xp-body">
-          <p class="xp-sum">Extended my prior role with ownership of business-model innovation and market-side innovation projects.</p>
-          <ul>
-            <li><b>Strategy:</b> Built &amp; lead the new Business Innovation Center, steering strategic innovation from idea to product-market fit.</li>
-            <li><b>Team:</b> Built and lead an interdisciplinary team focused on collaborative innovation methods and fast time-to-market.</li>
-            <li><b>Market expansion:</b> Led a product-extension project for the Chinese tea market — <b>PMF in 4 months</b> via agile prototyping, resulting in <b>60 machine sales</b> and store pilots, then handed to the R&amp;D process.</li>
-          </ul>
-          <div class="xp-tags"><span class="tag">Innovation strategy</span><span class="tag">MVP / PMF</span><span class="tag">Team leadership</span></div>
-        </div>
-      </article>
-
-      <article class="xp reveal" data-themes="sustainability leadership ai">
-        <header class="xp-head">
-          <div class="xp-logo"><img src="assets/logos/thermoplan.webp" alt="Thermoplan logo" loading="lazy" onerror="this.remove()"><span class="mono">T</span></div>
-          <div class="xp-title">
-            <h3>Head of Sustainability</h3>
-            <span class="xp-org">Thermoplan AG</span>
-          </div>
-          <span class="xp-date">07.2021 – 06.2024 <span class="dur">(3 yrs)</span></span>
-          <span class="xp-toggle" aria-hidden="true">+</span>
-        </header>
-        <div class="xp-body">
-          <ul>
-            <li><b>Project lead (2024–2027):</b> Led the Innosuisse-funded <b>"Circulus"</b> programme (CHF 8.1M budget) for holistic circular-economy implementation.</li>
-            <li><b>Strategy:</b> Developed &amp; launched the first company-wide sustainability strategy with an SBTi-aligned decarbonisation plan and net-zero-2050 KPIs.</li>
-            <li><b>Team:</b> Established a cross-departmental sustainability leadership team using Scrum to improve collaboration and accountability.</li>
-            <li><b>Stakeholders:</b> Direct communication with key stakeholders and customers to harmonise sustainability and business goals.</li>
-            <li><b>Automation:</b> Built an automated emissions-accounting system with interactive data visualisations (Python) — driving a <b>93,000 t CO₂e</b> reduction across Scope 1–3 in 4 years.</li>
-            <li><b>Reporting:</b> Ran LCAs and built an interactive Product Environmental Report (report.thermoplan.ch) — a top-10 company site, used in every tender.</li>
-          </ul>
-          <div class="xp-tags"><span class="tag">Stakeholder mgmt</span><span class="tag">Python automation</span><span class="tag">Data viz</span><span class="tag">Scrum</span></div>
-        </div>
-      </article>
-
-      <article class="xp reveal" data-themes="ai sustainability">
-        <header class="xp-head">
-          <div class="xp-logo"><img src="assets/logos/thermoplan.webp" alt="Thermoplan logo" loading="lazy" onerror="this.remove()"><span class="mono">T</span></div>
-          <div class="xp-title">
-            <h3>Research Engineer</h3>
-            <span class="xp-org">Thermoplan AG</span>
-          </div>
-          <span class="xp-date">05.2020 – 07.2021 <span class="dur">(1 yr 3 mos)</span></span>
-          <span class="xp-toggle" aria-hidden="true">+</span>
-        </header>
-        <div class="xp-body">
-          <ul>
-            <li><b>Automation:</b> Designed &amp; built an automatic measurement and visualisation program in Python for enthalpy-flow measurement in coffee machines.</li>
-            <li><b>Impact:</b> Optimised processes for a major customer, saving over <b>4,000 t CO₂e</b> per year.</li>
-          </ul>
-          <div class="xp-tags"><span class="tag">Python</span><span class="tag">Measurement &amp; viz</span></div>
-        </div>
-      </article>
-
-      <article class="xp reveal" data-themes="innovation ai">
-        <header class="xp-head">
-          <div class="xp-logo"><img src="assets/logos/vapporio.png" alt="Vapporio logo" loading="lazy" onerror="this.remove()"><span class="mono">V</span></div>
-          <div class="xp-title">
-            <h3>Co-founder</h3>
-            <span class="xp-org">Vapporio GmbH</span>
-          </div>
-          <span class="xp-date">07.2018 – 09.2020 <span class="dur">(2 yrs 3 mos)</span></span>
-          <span class="xp-toggle" aria-hidden="true">+</span>
-        </header>
-        <div class="xp-body">
-          <ul>
-            <li><b>Product:</b> Developed a patentable instant-steam module for coffee machines with automatic milk frothing and up to <b>80% energy savings</b>.</li>
-            <li><b>Go-to-market:</b> Concept to customer tests in 2 months; secured innovation funding via the Coffee Excellence Center (ZHAW).</li>
-            <li><b>Business development:</b> be-advanced Challenge Accelerator; refined product strategy through many pivots driven by customer feedback.</li>
-            <li><b>Consulting:</b> Long-term module tests with one of the largest coffee-machine makers; customer surveys, patent research and cost optimisation.</li>
-          </ul>
-          <div class="xp-tags"><span class="tag">0→1 product</span><span class="tag">Pivots</span><span class="tag">Consulting</span></div>
-        </div>
-      </article>
-
-      <article class="xp reveal" data-themes="innovation leadership">
-        <header class="xp-head">
-          <div class="xp-logo"><img src="assets/logos/picobrew.png" alt="PicoBrew logo" loading="lazy" onerror="this.remove()"><span class="mono">P</span></div>
-          <div class="xp-title">
-            <h3>Mechanical Engineer</h3>
-            <span class="xp-org">PicoBrew Inc., Seattle (USA)</span>
-          </div>
-          <span class="xp-date">06.2017 – 05.2018 <span class="dur">(1 yr)</span></span>
-          <span class="xp-toggle" aria-hidden="true">+</span>
-        </header>
-        <div class="xp-body">
-          <ul>
-            <li><b>Project lead:</b> End-to-end development of a patentable IoT fermentation monitor for home brewers.</li>
-            <li><b>Coordination:</b> Led an interdisciplinary team of 3 engineers and 20+ suppliers to market launch in 8 months.</li>
-            <li><b>China production:</b> Supervised the first run of 5,000 units, coordinated zero-series production in China and secured quality standards.</li>
-          </ul>
-          <div class="xp-tags"><span class="tag">IoT</span><span class="tag">Supplier coordination</span><span class="tag">Launch</span></div>
-        </div>
-      </article>
-
-      <article class="xp reveal" data-themes="leadership">
-        <header class="xp-head">
-          <div class="xp-logo"><img src="assets/logos/thermoplan.webp" alt="Thermoplan logo" loading="lazy" onerror="this.remove()"><span class="mono">T</span></div>
-          <div class="xp-title">
-            <h3>Intern — Mechanical Engineering</h3>
-            <span class="xp-org">Thermoplan AG</span>
-          </div>
-          <span class="xp-date">07.2016 – 05.2017 <span class="dur">(11 mos)</span></span>
-          <span class="xp-toggle" aria-hidden="true">+</span>
-        </header>
-        <div class="xp-body">
-          <ul>
-            <li>Mechanical-engineering internship at a leading Swiss coffee-equipment manufacturer — hands-on foundation in real product development.</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="xp reveal" data-themes="leadership">
-        <header class="xp-head">
-          <div class="xp-logo"><img src="assets/logos/picobrew.png" alt="PicoBrew logo" loading="lazy" onerror="this.remove()"><span class="mono">P</span></div>
-          <div class="xp-title">
-            <h3>Intern — Mechanical Engineering</h3>
-            <span class="xp-org">PicoBrew Inc., Seattle (USA)</span>
-          </div>
-          <span class="xp-date">01.2016 – 03.2016 <span class="dur">(3 mos)</span></span>
-          <span class="xp-toggle" aria-hidden="true">+</span>
-        </header>
-        <div class="xp-body">
-          <ul>
-            <li>Mechanical-engineering internship in Seattle — early hands-on product-development experience at a US hardware startup.</li>
-          </ul>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===================== AI PROJECTS ===================== -->
-<section class="cv-sec" id="projects">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="kicker"><span class="idx">03</span> Everyday-AI in practice</div>
-      <h2>I don't just talk AI — I ship it.</h2>
-      <p class="sub">A self-built portfolio of AI &amp; PWA apps, each solving a real, everyday need. Proof that I can turn AI capability into tools people actually use.</p>
-    </div>
-
-    <div class="proj-grid" data-stagger>
-      <a class="proj reveal" href="https://ikigai2.vercel.app/" target="_blank" rel="noopener">
-        <div class="proj-shot"><div class="frame-holder" data-src="https://ikigai2.vercel.app/">
-          <div class="proj-poster" style="background:linear-gradient(160deg,#7CB8A0,#5A9A82)"><span>IK</span></div></div></div>
-        <div class="proj-info">
-          <div class="proj-top"><span class="proj-name">Ikigai</span><span class="proj-ar">↗</span></div>
-          <p>A GPT agent that coaches you through purpose &amp; turns it into OKRs. Conversational AI doing the hard part.</p>
-          <div class="proj-tags"><span class="tag">GPT agent</span><span class="tag">PWA</span></div>
-        </div>
-      </a>
-      <a class="proj reveal" href="https://nais-sigma.vercel.app/" target="_blank" rel="noopener">
-        <div class="proj-shot"><div class="frame-holder" data-src="https://nais-sigma.vercel.app/">
-          <div class="proj-poster" style="background:linear-gradient(160deg,#6FAE83,#4F8A5E)"><span>Na</span></div></div></div>
-        <div class="proj-info">
-          <div class="proj-top"><span class="proj-name">NaiS</span><span class="proj-ar">↗</span></div>
-          <p>Computer-vision plant recognition for foresters — one photo detects indicator plants &amp; suggests tree species.</p>
-          <div class="proj-tags"><span class="tag">AI vision</span><span class="tag">PWA</span></div>
-        </div>
-      </a>
-      <a class="proj reveal" href="https://sigmascope.ch/" target="_blank" rel="noopener">
-        <div class="proj-shot"><div class="frame-holder" data-src="https://sigmascope.ch/" data-w="1340">
-          <div class="proj-poster" style="background:linear-gradient(150deg,#5E9C8B,#3f7b6c)"><span>SS</span></div></div></div>
-        <div class="proj-info">
-          <div class="proj-top"><span class="proj-name">Sigmascope</span><span class="proj-ar">↗</span></div>
-          <p>An AI assistant over Switzerland's LCA datasets — find the right data from plain language.</p>
-          <div class="proj-tags"><span class="tag">AI assistant</span><span class="tag">Data</span></div>
-        </div>
-      </a>
-      <a class="proj reveal" href="https://vzev-ogimatte.vercel.app/" target="_blank" rel="noopener">
-        <div class="proj-shot"><div class="frame-holder" data-src="https://vzev-ogimatte.vercel.app/" data-w="1340">
-          <div class="proj-poster" style="background:linear-gradient(150deg,#E6B85C,#C98A2E)"><span>vZ</span></div></div></div>
-        <div class="proj-info">
-          <div class="proj-top"><span class="proj-name">vZEV</span><span class="proj-ar">↗</span></div>
-          <p>In-browser solar self-consumption billing from smart-meter data — automated, transparent, open source.</p>
-          <div class="proj-tags"><span class="tag">Automation</span><span class="tag">Data viz</span></div>
-        </div>
-      </a>
-    </div>
-    <p class="proj-more reveal">…plus Ottolenghi, Sleep Tracker, RockBox &amp; BabyRest — <a href="index.html">see the full portfolio →</a></p>
-  </div>
-</section>
-
-<!-- ===================== SKILLS ===================== -->
-<section class="cv-sec" id="skills">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="kicker"><span class="idx">04</span> Skills &amp; tools</div>
-      <h2>What I bring on day one.</h2>
-    </div>
-
-    <div class="skills-wrap">
-      <div class="skills reveal" id="skills-list">
-        <div class="skill"><div class="skill-top"><span>Everyday AI &amp; GPT agents</span><span class="skill-lvl">Strong</span></div><div class="bar"><i style="--v:92%"></i></div></div>
-        <div class="skill"><div class="skill-top"><span>Innovation &amp; product-market fit</span><span class="skill-lvl">Expert</span></div><div class="bar"><i style="--v:95%"></i></div></div>
-        <div class="skill"><div class="skill-top"><span>Stakeholder mgmt &amp; facilitation</span><span class="skill-lvl">Strong</span></div><div class="bar"><i style="--v:90%"></i></div></div>
-        <div class="skill"><div class="skill-top"><span>M365 Copilot / Microsoft Graph</span><span class="skill-lvl warn">Ramping fast</span></div><div class="bar"><i style="--v:55%"></i></div></div>
+  <!-- ===================== WHY I FIT ===================== -->
+  <section class="cv-sec" id="fit">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="kicker"><span class="idx">01</span> Why I fit this role</div>
+        <h2>Your requirements, my evidence.</h2>
+        <p class="sub">Mapped one-to-one to the job description. Tap a card to see the proof.</p>
       </div>
 
-      <div class="side reveal d1">
-        <div class="langs">
-          <h4>Languages</h4>
-          <div class="lang"><span>German</span><span class="lang-lvl">Native</span></div>
-          <div class="lang"><span>English</span><span class="lang-lvl">Professional</span></div>
-          <div class="lang"><span>French</span><span class="lang-lvl">Conversational</span></div>
-        </div>
-        <div class="toolbox">
-          <h4>Toolbox</h4>
-          <div class="chips-static">
-            <span class="tag">LLM / GPT agents</span><span class="tag">Microsoft 365 Copilot</span><span class="tag">Python automation</span><span class="tag">Hermes Agent</span><span class="tag">Gemini</span><span class="tag">Claude Code</span><span class="tag">Google Antigravity</span><span class="tag">Cursor</span><span class="tag">n8n</span>
+      <div class="fit-grid" data-stagger>
+        <button class="fit-card reveal" type="button">
+          <div class="fit-q"><span class="qn">01</span>Understand the real job-to-be-done behind every everyday-AI need
+          </div>
+          <div class="fit-a">Everyday AI only creates value when it serves a real job-to-be-done. I start by uncovering
+            what people are actually trying to accomplish — not the feature they ask for — then translate that into the
+            right AI use case. It's the method behind 8+ shipped AI products (Ikigai, NaiS, Sigmascope) that solved
+            genuine needs.</div>
+        </button>
+        <button class="fit-card reveal" type="button">
+          <div class="fit-q"><span class="qn">02</span>Lead sub-projects &amp; work streams to goals, quality and impact
+          </div>
+          <div class="fit-a">I led the CHF 8.1M Innosuisse "Circulus" programme and built Thermoplan's Business
+            Innovation Center from zero — owning delivery end-to-end, from idea to product-market fit and hand-off to
+            R&amp;D.</div>
+        </button>
+        <button class="fit-card reveal" type="button">
+          <div class="fit-q"><span class="qn">03</span>Coordinate stakeholders across IT, specialist units, HR &amp;
+            governance</div>
+          <div class="fit-a">As Head of Sustainability I aligned a complex, company-wide stakeholder landscape and built
+            a cross-departmental leadership team using Scrum — harmonising technical, business and governance goals.
+          </div>
+        </button>
+        <div class="fit-card reveal" role="button" tabindex="0">
+          <div class="fit-q"><span class="qn">04</span>Design &amp; run workshops, trainings and events — online &amp;
+            on-site</div>
+          <div class="fit-a">Facilitation is part of my toolkit: Design Thinking &amp; Value Proposition workshops, an
+            öbu SBTi webinar and accelerator pitches. I make complex topics understandable for any audience.
+            <span class="fit-links">
+              <a href="https://sustainableswitzerland.ch/artikel/klimaschutz-unternehmen-ueberholen-die-politik-id.1279"
+                target="_blank" rel="noopener" onclick="event.stopPropagation()">Sustainable Switzerland — Klimaschutz
+                ↗</a>
+              <a href="https://youtu.be/KG-DGkoCGPc?si=GpdCr8rZWnBxoh1z&amp;t=1601" target="_blank" rel="noopener"
+                onclick="event.stopPropagation()">öbu-Impuls — webinar ↗</a>
+              <a href="https://www.swiss-medtech.ch/sites/default/files/2023-06/SMD23_Matteo_Trachsel_Slides.pdf"
+                target="_blank" rel="noopener" onclick="event.stopPropagation()">Medtech Day 2023 — presentation ↗</a>
+            </span>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===================== EDUCATION ===================== -->
-<section class="cv-sec" id="education">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="kicker"><span class="idx">05</span> Education</div>
-      <h2>Engineering foundation.</h2>
-    </div>
-    <div class="edu-list" data-stagger>
-      <div class="edu reveal"><div class="edu-main"><h4>M.Sc. Mechanical Engineering</h4><span>Lucerne University of Applied Sciences (HSLU)</span></div><span class="edu-date">2019 – 2021</span></div>
-      <div class="edu reveal"><div class="edu-main"><h4>B.Sc. Mechanical Engineering</h4><span>Lucerne University of Applied Sciences (HSLU)</span></div><span class="edu-date">2013 – 2017</span></div>
-      <div class="edu reveal"><div class="edu-main"><h4>Exchange semester, B.Sc.</h4><span>California Polytechnic State University (Cal Poly), USA</span></div><span class="edu-date">2015</span></div>
-      <div class="edu reveal"><div class="edu-main"><h4>Military service — mountain specialist</h4><span>Swiss Armed Forces, Andermatt</span></div><span class="edu-date">2013</span></div>
-      <div class="edu reveal"><div class="edu-main"><h4>Matura</h4><span>Sportmittelschule Engelberg</span></div><span class="edu-date">2007 – 2011</span></div>
-    </div>
-  </div>
-</section>
+  <!-- ===================== EXPERIENCE ===================== -->
+  <section class="cv-sec" id="experience">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="kicker"><span class="idx">02</span> Experience</div>
+        <h2>From engineering to AI-led innovation.</h2>
+        <p class="sub">Click any role to expand the detail.</p>
+      </div>
 
-<!-- ===================== CONTACT / FOOTER ===================== -->
-<section class="cv-contact" id="contact">
-  <div class="wrap">
-    <div class="kicker reveal" style="justify-content:center;"><span class="idx">06</span> Let's talk</div>
-    <h2 class="reveal">Ready to make AI an <span class="em">everyday</span> habit at Swiss&nbsp;Post.</h2>
-    <a class="mail reveal d1" href="mailto:matteo.trachsel@gmail.com?subject=Senior%20Everyday%20AI%20Specialist%20(Ref.%2073495)">matteo.trachsel@gmail.com</a>
-    <div class="social reveal d2">
-      <a href="tel:+41795115788">+41 79 511 57 88</a>
-      <a href="https://www.linkedin.com/in/matteotrachsel" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a href="https://github.com/matteotrachsel" target="_blank" rel="noopener">GitHub ↗</a>
-      <a href="index.html">Portfolio →</a>
-    </div>
-  </div>
-  <div class="foot">
-    <span>© 2026 Matteo Trachsel</span>
-    <span>Interactive CV · tailored for Ref. 73495</span>
-  </div>
-</section>
+      <div class="xp-list" id="xpList">
 
-<script src="cv.js"></script>
+        <article class="xp reveal open" data-themes="innovation leadership">
+          <header class="xp-head">
+            <div class="xp-logo"><img src="assets/logos/ypsomed.png" alt="Ypsomed logo" loading="lazy"
+                onerror="this.remove()"><span class="mono">Y</span></div>
+            <div class="xp-title">
+              <h3>Product Manager — Autoinjectors</h3>
+              <span class="xp-org">Ypsomed AG</span>
+            </div>
+            <span class="xp-date">02.2026 – present <span class="dur">(5 mos)</span></span>
+            <span class="xp-toggle" aria-hidden="true">+</span>
+          </header>
+          <div class="xp-body">
+            <p class="xp-sum">Product manager for self-injection devices (autoinjectors) at Ypsomed — a leading Swiss
+              medical-technology company in drug-delivery systems.</p>
+            <ul>
+              <li><b>Product ownership:</b> Drive the product lifecycle of autoinjector platforms in close collaboration
+                with R&amp;D, quality, regulatory and supply chain.</li>
+              <li><b>User-centric:</b> Translate patient and pharma-partner needs into clear product requirements —
+                bringing the same validate-fast, evidence-led approach to a regulated MedTech environment.</li>
+            </ul>
+            <div class="xp-tags"><span class="tag">Product management</span><span class="tag">MedTech</span><span
+                class="tag">Cross-functional</span></div>
+          </div>
+        </article>
+
+        <article class="xp reveal open" data-themes="innovation leadership ai">
+          <header class="xp-head">
+            <div class="xp-logo"><img src="assets/logos/thermoplan.webp" alt="Thermoplan logo" loading="lazy"
+                onerror="this.remove()"><span class="mono">T</span></div>
+            <div class="xp-title">
+              <h3>Head of Business Innovation &amp; Sustainability</h3>
+              <span class="xp-org">Thermoplan AG</span>
+            </div>
+            <span class="xp-date">06.2024 – 01.2026 <span class="dur">(1 yr 8 mos)</span></span>
+            <span class="xp-toggle" aria-hidden="true">+</span>
+          </header>
+          <div class="xp-body">
+            <p class="xp-sum">Extended my prior role with ownership of business-model innovation and market-side
+              innovation projects.</p>
+            <ul>
+              <li><b>Strategy:</b> Built &amp; lead the new Business Innovation Center, steering strategic innovation
+                from idea to product-market fit.</li>
+              <li><b>Team:</b> Built and lead an interdisciplinary team focused on collaborative innovation methods and
+                fast time-to-market.</li>
+              <li><b>Market expansion:</b> Led a product-extension project for the Chinese tea market — <b>PMF in 4
+                  months</b> via agile prototyping, resulting in <b>60 machine sales</b> and store pilots, then handed
+                to the R&amp;D process.</li>
+            </ul>
+            <div class="xp-tags"><span class="tag">Innovation strategy</span><span class="tag">MVP / PMF</span><span
+                class="tag">Team leadership</span></div>
+          </div>
+        </article>
+
+        <article class="xp reveal" data-themes="sustainability leadership ai">
+          <header class="xp-head">
+            <div class="xp-logo"><img src="assets/logos/thermoplan.webp" alt="Thermoplan logo" loading="lazy"
+                onerror="this.remove()"><span class="mono">T</span></div>
+            <div class="xp-title">
+              <h3>Head of Sustainability</h3>
+              <span class="xp-org">Thermoplan AG</span>
+            </div>
+            <span class="xp-date">07.2021 – 06.2024 <span class="dur">(3 yrs)</span></span>
+            <span class="xp-toggle" aria-hidden="true">+</span>
+          </header>
+          <div class="xp-body">
+            <ul>
+              <li><b>Project lead (2024–2027):</b> Led the Innosuisse-funded <b>"Circulus"</b> programme (CHF 8.1M
+                budget) for holistic circular-economy implementation.</li>
+              <li><b>Strategy:</b> Developed &amp; launched the first company-wide sustainability strategy with an
+                SBTi-aligned decarbonisation plan and net-zero-2050 KPIs.</li>
+              <li><b>Team:</b> Established a cross-departmental sustainability leadership team using Scrum to improve
+                collaboration and accountability.</li>
+              <li><b>Stakeholders:</b> Direct communication with key stakeholders and customers to harmonise
+                sustainability and business goals.</li>
+              <li><b>Automation:</b> Built an automated emissions-accounting system with interactive data visualisations
+                (Python) — driving a <b>93,000 t CO₂e</b> reduction across Scope 1–3 in 4 years.</li>
+              <li><b>Reporting:</b> Ran LCAs and built an interactive Product Environmental Report
+                (report.thermoplan.ch) — a top-10 company site, used in every tender.</li>
+            </ul>
+            <div class="xp-tags"><span class="tag">Stakeholder mgmt</span><span class="tag">Python
+                automation</span><span class="tag">Data viz</span><span class="tag">Scrum</span></div>
+          </div>
+        </article>
+
+        <article class="xp reveal" data-themes="ai sustainability">
+          <header class="xp-head">
+            <div class="xp-logo"><img src="assets/logos/thermoplan.webp" alt="Thermoplan logo" loading="lazy"
+                onerror="this.remove()"><span class="mono">T</span></div>
+            <div class="xp-title">
+              <h3>Research Engineer</h3>
+              <span class="xp-org">Thermoplan AG</span>
+            </div>
+            <span class="xp-date">05.2020 – 07.2021 <span class="dur">(1 yr 3 mos)</span></span>
+            <span class="xp-toggle" aria-hidden="true">+</span>
+          </header>
+          <div class="xp-body">
+            <ul>
+              <li><b>Automation:</b> Designed &amp; built an automatic measurement and visualisation program in Python
+                for enthalpy-flow measurement in coffee machines.</li>
+              <li><b>Impact:</b> Optimised processes for a major customer, saving over <b>4,000 t CO₂e</b> per year.
+              </li>
+            </ul>
+            <div class="xp-tags"><span class="tag">Python</span><span class="tag">Measurement &amp; viz</span></div>
+          </div>
+        </article>
+
+        <article class="xp reveal" data-themes="innovation ai">
+          <header class="xp-head">
+            <div class="xp-logo"><img src="assets/logos/vapporio.png" alt="Vapporio logo" loading="lazy"
+                onerror="this.remove()"><span class="mono">V</span></div>
+            <div class="xp-title">
+              <h3>Co-founder</h3>
+              <span class="xp-org">Vapporio GmbH</span>
+            </div>
+            <span class="xp-date">07.2018 – 09.2020 <span class="dur">(2 yrs 3 mos)</span></span>
+            <span class="xp-toggle" aria-hidden="true">+</span>
+          </header>
+          <div class="xp-body">
+            <ul>
+              <li><b>Product:</b> Developed a patentable instant-steam module for coffee machines with automatic milk
+                frothing and up to <b>80% energy savings</b>.</li>
+              <li><b>Go-to-market:</b> Concept to customer tests in 2 months; secured innovation funding via the Coffee
+                Excellence Center (ZHAW).</li>
+              <li><b>Business development:</b> be-advanced Challenge Accelerator; refined product strategy through many
+                pivots driven by customer feedback.</li>
+              <li><b>Consulting:</b> Long-term module tests with one of the largest coffee-machine makers; customer
+                surveys, patent research and cost optimisation.</li>
+            </ul>
+            <div class="xp-tags"><span class="tag">0→1 product</span><span class="tag">Pivots</span><span
+                class="tag">Consulting</span></div>
+          </div>
+        </article>
+
+        <article class="xp reveal" data-themes="innovation leadership">
+          <header class="xp-head">
+            <div class="xp-logo"><img src="assets/logos/picobrew.png" alt="PicoBrew logo" loading="lazy"
+                onerror="this.remove()"><span class="mono">P</span></div>
+            <div class="xp-title">
+              <h3>Mechanical Engineer</h3>
+              <span class="xp-org">PicoBrew Inc., Seattle (USA)</span>
+            </div>
+            <span class="xp-date">06.2017 – 05.2018 <span class="dur">(1 yr)</span></span>
+            <span class="xp-toggle" aria-hidden="true">+</span>
+          </header>
+          <div class="xp-body">
+            <ul>
+              <li><b>Project lead:</b> End-to-end development of a patentable IoT fermentation monitor for home brewers.
+              </li>
+              <li><b>Coordination:</b> Led an interdisciplinary team of 3 engineers and 20+ suppliers to market launch
+                in 8 months.</li>
+              <li><b>China production:</b> Supervised the first run of 5,000 units, coordinated zero-series production
+                in China and secured quality standards.</li>
+            </ul>
+            <div class="xp-tags"><span class="tag">IoT</span><span class="tag">Supplier coordination</span><span
+                class="tag">Launch</span></div>
+          </div>
+        </article>
+
+        <article class="xp reveal" data-themes="leadership">
+          <header class="xp-head">
+            <div class="xp-logo"><img src="assets/logos/thermoplan.webp" alt="Thermoplan logo" loading="lazy"
+                onerror="this.remove()"><span class="mono">T</span></div>
+            <div class="xp-title">
+              <h3>Intern — Mechanical Engineering</h3>
+              <span class="xp-org">Thermoplan AG</span>
+            </div>
+            <span class="xp-date">07.2016 – 05.2017 <span class="dur">(11 mos)</span></span>
+            <span class="xp-toggle" aria-hidden="true">+</span>
+          </header>
+          <div class="xp-body">
+            <ul>
+              <li>Mechanical-engineering internship at a leading Swiss coffee-equipment manufacturer — hands-on
+                foundation in real product development.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="xp reveal" data-themes="leadership">
+          <header class="xp-head">
+            <div class="xp-logo"><img src="assets/logos/picobrew.png" alt="PicoBrew logo" loading="lazy"
+                onerror="this.remove()"><span class="mono">P</span></div>
+            <div class="xp-title">
+              <h3>Intern — Mechanical Engineering</h3>
+              <span class="xp-org">PicoBrew Inc., Seattle (USA)</span>
+            </div>
+            <span class="xp-date">01.2016 – 03.2016 <span class="dur">(3 mos)</span></span>
+            <span class="xp-toggle" aria-hidden="true">+</span>
+          </header>
+          <div class="xp-body">
+            <ul>
+              <li>Mechanical-engineering internship in Seattle — early hands-on product-development experience at a US
+                hardware startup.</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== AI PROJECTS ===================== -->
+  <section class="cv-sec" id="projects">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="kicker"><span class="idx">03</span> Everyday-AI in practice</div>
+        <h2>I don't just talk AI — I ship it.</h2>
+        <p class="sub">A self-built portfolio of AI &amp; PWA apps, each solving a real, everyday need. Proof that I can
+          turn AI capability into tools people actually use.</p>
+      </div>
+
+      <div class="proj-grid" data-stagger>
+        <a class="proj reveal" href="https://ikigai2.vercel.app/" target="_blank" rel="noopener">
+          <div class="proj-shot">
+            <div class="frame-holder" data-src="https://ikigai2.vercel.app/">
+              <div class="proj-poster" style="background:linear-gradient(160deg,#7CB8A0,#5A9A82)"><span>IK</span></div>
+            </div>
+          </div>
+          <div class="proj-info">
+            <div class="proj-top"><span class="proj-name">Ikigai</span><span class="proj-ar">↗</span></div>
+            <p>A GPT agent that coaches you through purpose &amp; turns it into OKRs. Conversational AI doing the hard
+              part.</p>
+            <div class="proj-tags"><span class="tag">GPT agent</span><span class="tag">PWA</span></div>
+          </div>
+        </a>
+        <a class="proj reveal" href="https://nais-sigma.vercel.app/" target="_blank" rel="noopener">
+          <div class="proj-shot">
+            <div class="frame-holder" data-src="https://nais-sigma.vercel.app/">
+              <div class="proj-poster" style="background:linear-gradient(160deg,#6FAE83,#4F8A5E)"><span>Na</span></div>
+            </div>
+          </div>
+          <div class="proj-info">
+            <div class="proj-top"><span class="proj-name">NaiS</span><span class="proj-ar">↗</span></div>
+            <p>Computer-vision plant recognition for foresters — one photo detects indicator plants &amp; suggests tree
+              species.</p>
+            <div class="proj-tags"><span class="tag">AI vision</span><span class="tag">PWA</span></div>
+          </div>
+        </a>
+        <a class="proj reveal" href="https://sigmascope.ch/" target="_blank" rel="noopener">
+          <div class="proj-shot">
+            <div class="frame-holder" data-src="https://sigmascope.ch/" data-w="1340">
+              <div class="proj-poster" style="background:linear-gradient(150deg,#5E9C8B,#3f7b6c)"><span>SS</span></div>
+            </div>
+          </div>
+          <div class="proj-info">
+            <div class="proj-top"><span class="proj-name">Sigmascope</span><span class="proj-ar">↗</span></div>
+            <p>An AI assistant over Switzerland's LCA datasets — find the right data from plain language.</p>
+            <div class="proj-tags"><span class="tag">AI assistant</span><span class="tag">Data</span></div>
+          </div>
+        </a>
+        <a class="proj reveal" href="https://vzev-ogimatte.vercel.app/" target="_blank" rel="noopener">
+          <div class="proj-shot">
+            <div class="frame-holder" data-src="https://vzev-ogimatte.vercel.app/" data-w="1340">
+              <div class="proj-poster" style="background:linear-gradient(150deg,#E6B85C,#C98A2E)"><span>vZ</span></div>
+            </div>
+          </div>
+          <div class="proj-info">
+            <div class="proj-top"><span class="proj-name">vZEV</span><span class="proj-ar">↗</span></div>
+            <p>In-browser solar self-consumption billing from smart-meter data — automated, transparent, open source.
+            </p>
+            <div class="proj-tags"><span class="tag">Automation</span><span class="tag">Data viz</span></div>
+          </div>
+        </a>
+      </div>
+      <p class="proj-more reveal">…plus Ottolenghi, Sleep Tracker, RockBox &amp; BabyRest — <a href="index.html">see the
+          full portfolio →</a></p>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS ===================== -->
+  <section class="cv-sec" id="skills">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="kicker"><span class="idx">04</span> Skills &amp; tools</div>
+        <h2>What I bring on day one.</h2>
+      </div>
+
+      <div class="skills-wrap">
+        <div class="skills reveal" id="skills-list">
+          <div class="skill">
+            <div class="skill-top"><span>Everyday AI &amp; GPT agents</span><span class="skill-lvl">Strong</span></div>
+            <div class="bar"><i style="--v:92%"></i></div>
+          </div>
+          <div class="skill">
+            <div class="skill-top"><span>Innovation &amp; product-market fit</span><span class="skill-lvl">Expert</span>
+            </div>
+            <div class="bar"><i style="--v:95%"></i></div>
+          </div>
+          <div class="skill">
+            <div class="skill-top"><span>Stakeholder mgmt &amp; facilitation</span><span class="skill-lvl">Strong</span>
+            </div>
+            <div class="bar"><i style="--v:90%"></i></div>
+          </div>
+          <div class="skill">
+            <div class="skill-top"><span>M365 Copilot / Microsoft Graph</span><span class="skill-lvl warn">Ramping
+                fast</span></div>
+            <div class="bar"><i style="--v:55%"></i></div>
+          </div>
+        </div>
+
+        <div class="side reveal d1">
+          <div class="langs">
+            <h4>Languages</h4>
+            <div class="lang"><span>German</span><span class="lang-lvl">Native</span></div>
+            <div class="lang"><span>English</span><span class="lang-lvl">Professional</span></div>
+            <div class="lang"><span>French</span><span class="lang-lvl">Conversational</span></div>
+          </div>
+          <div class="toolbox">
+            <h4>Toolbox</h4>
+            <div class="chips-static">
+              <span class="tag">LLM / GPT agents</span><span class="tag">Microsoft 365 Copilot</span><span
+                class="tag">Python automation</span><span class="tag">Hermes Agent</span><span
+                class="tag">Gemini</span><span class="tag">Claude Code</span><span class="tag">Google
+                Antigravity</span><span class="tag">Cursor</span><span class="tag">n8n</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EDUCATION ===================== -->
+  <section class="cv-sec" id="education">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="kicker"><span class="idx">05</span> Education</div>
+        <h2>Engineering foundation.</h2>
+      </div>
+      <div class="edu-list" data-stagger>
+        <div class="edu reveal">
+          <div class="edu-main">
+            <h4>M.Sc. Mechanical Engineering</h4><span>Lucerne University of Applied Sciences (HSLU)</span>
+          </div><span class="edu-date">2019 – 2021</span>
+        </div>
+        <div class="edu reveal">
+          <div class="edu-main">
+            <h4>B.Sc. Mechanical Engineering</h4><span>Lucerne University of Applied Sciences (HSLU)</span>
+          </div><span class="edu-date">2013 – 2017</span>
+        </div>
+        <div class="edu reveal">
+          <div class="edu-main">
+            <h4>Exchange semester, B.Sc.</h4><span>California Polytechnic State University (Cal Poly), USA</span>
+          </div><span class="edu-date">2015</span>
+        </div>
+        <div class="edu reveal">
+          <div class="edu-main">
+            <h4>Military service — mountain specialist</h4><span>Swiss Armed Forces, Andermatt</span>
+          </div><span class="edu-date">2013</span>
+        </div>
+        <div class="edu reveal">
+          <div class="edu-main">
+            <h4>Matura</h4><span>Sportmittelschule Engelberg</span>
+          </div><span class="edu-date">2007 – 2011</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT / FOOTER ===================== -->
+  <section class="cv-contact" id="contact">
+    <div class="wrap">
+      <div class="kicker reveal" style="justify-content:center;"><span class="idx">06</span> Let's talk</div>
+      <h2 class="reveal">Ready to make AI an <span class="em">everyday</span> habit at Swiss&nbsp;Post.</h2>
+      <a class="mail reveal d1"
+        href="mailto:matteo.trachsel@gmail.com?subject=Senior%20Everyday%20AI%20Specialist%20(Ref.%2073495)">matteo.trachsel@gmail.com</a>
+      <div class="social reveal d2">
+        <a href="tel:+41795115788">+41 79 511 57 88</a>
+        <a href="https://www.linkedin.com/in/matteotrachsel" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="https://github.com/matteotrachsel" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="index.html">Portfolio →</a>
+      </div>
+    </div>
+    <div class="foot">
+      <span>© 2026 Matteo Trachsel</span>
+      <span>Interactive CV · tailored for Ref. 73495</span>
+    </div>
+  </section>
+
+  <script src="cv.js"></script>
 </body>
+
 </html>
