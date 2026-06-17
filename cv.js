@@ -247,6 +247,11 @@
   /* ---- Fit cards: expand/collapse ------------------------------------- */
   [].forEach.call(document.querySelectorAll('.fit-card'), function (card) {
     card.addEventListener('click', function () { card.classList.toggle('open'); });
+    if (card.tagName !== 'BUTTON') {
+      card.addEventListener('keydown', function (e) {
+        if (e.target === card && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); card.classList.toggle('open'); }
+      });
+    }
   });
 
   /* ---- Experience accordion ------------------------------------------- */
