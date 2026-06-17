@@ -58,6 +58,15 @@
 }
 .cv-eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: #1A1C1D; animation: none; }
 .cv-eyebrow .ref { color: rgba(26,28,29,.6); border-left: 1px solid rgba(0,0,0,.2); padding-left: 10px; }
+
+/* Mobile: eyebrow wraps — use a tidy rounded rectangle instead of a full pill */
+@media (max-width: 600px) {
+  .cv-eyebrow {
+    border-radius: 14px; font-size: 10px; letter-spacing: .05em;
+    padding: 9px 13px; gap: 7px; line-height: 1.55; align-items: baseline;
+  }
+  .cv-eyebrow .ref { border-left: 0; padding-left: 0; }
+}
 .cv-eyebrow .post { font-weight: 800; }
 .cv-hero h1 { font-family: var(--serif); font-weight: 800; font-size: clamp(46px, 9vw, 110px); line-height: 1; letter-spacing: -.04em; color: var(--ink); }
 .cv-role { margin-top: 22px; font-family: var(--serif); font-weight: 600; font-size: clamp(20px, 3vw, 32px); line-height: 1.18; letter-spacing: -.02em; max-width: 24ch; color: var(--ink); }
