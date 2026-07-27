@@ -5,17 +5,17 @@
 
 .em { color: var(--sage-dark); font-weight: 700; }
 
-/* Text selection in Swiss Post yellow (CV page only) */
-::selection { background: #FFCC00; color: #1A1C1D; }
-::-moz-selection { background: #FFCC00; color: #1A1C1D; }
+/* Text selection in BKW orange (CV page only) */
+::selection { background: #FF6418; color: #ffffff; }
+::-moz-selection { background: #FF6418; color: #ffffff; }
 
-/* Section labels highlighted in Swiss Post yellow */
+/* Section labels highlighted in BKW orange */
 .kicker {
-  background: #FFCC00; color: #1A1C1D;
+  background: #FF6418; color: #ffffff;
   padding: 6px 12px; border-radius: 6px;
 }
 .kicker::before { display: none; }
-.kicker .idx { color: #1A1C1D; font-weight: 700; }
+.kicker .idx { color: #ffffff; font-weight: 700; }
 
 /* ====================== STICKY NAV ===================================== */
 .cv-nav {
@@ -53,11 +53,11 @@
 .cv-eyebrow {
   display: inline-flex; align-items: center; gap: 10px; flex-wrap: wrap;
   font-family: var(--mono); font-weight: 600; font-size: 12px; letter-spacing: .1em; text-transform: uppercase;
-  color: #1A1C1D; padding: 8px 14px; border: 1px solid #EAB800;
-  border-radius: 999px; background: #FFCC00; margin-bottom: 28px;
+  color: #ffffff; padding: 8px 14px; border: 1px solid #E0530C;
+  border-radius: 999px; background: #FF6418; margin-bottom: 28px;
 }
-.cv-eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: #1A1C1D; animation: none; }
-.cv-eyebrow .ref { color: rgba(26,28,29,.6); border-left: 1px solid rgba(0,0,0,.2); padding-left: 10px; }
+.cv-eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: #ffffff; animation: none; }
+.cv-eyebrow .ref { color: rgba(255,255,255,.7); border-left: 1px solid rgba(255,255,255,.35); padding-left: 10px; }
 
 /* Mobile: eyebrow wraps — use a tidy rounded rectangle instead of a full pill */
 @media (max-width: 600px) {
@@ -72,7 +72,7 @@
 .cv-role { margin-top: 22px; font-family: var(--serif); font-weight: 600; font-size: clamp(20px, 3vw, 32px); line-height: 1.18; letter-spacing: -.02em; max-width: 24ch; color: var(--ink); }
 .cv-lede { margin-top: 22px; max-width: 64ch; font-size: clamp(16px, 1.8vw, 19px); color: var(--ink-soft); line-height: 1.6; }
 .cv-lede b, .cv-role .em { font-weight: 700; }
-.cv-lede .post { font-weight: 700; color: var(--ink); background: color-mix(in srgb, #FFCC00 60%, transparent); padding: 1px 6px; border-radius: 5px; white-space: nowrap; }
+.cv-lede .post { font-weight: 700; color: #ffffff; background: #FF6418; padding: 1px 6px; border-radius: 5px; white-space: nowrap; }
 .cv-meta { margin-top: 20px; display: inline-flex; align-items: center; gap: 9px; font-family: var(--mono); font-weight: 500; font-size: 13px; letter-spacing: .02em; color: var(--ink-soft); }
 .cv-meta .pin { width: 8px; height: 8px; border-radius: 50%; background: var(--sage-dark); box-shadow: 0 0 0 3px color-mix(in srgb, var(--sage) 28%, transparent); flex: none; }
 .cv-actions { margin-top: 28px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
