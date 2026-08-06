@@ -62,10 +62,10 @@
 
     // Refined near-monochrome palette: a single sage accent + soft neutrals.
     var PAL = [
-      [90, 154, 130],   // sage-dark accent
-      [124, 184, 160],  // sage
-      [120, 128, 128],  // warm grey
-      [150, 158, 156]   // light grey
+      [18, 87, 184],    // platform blue accent
+      [76, 143, 214],   // light blue
+      [120, 128, 134],  // cool grey
+      [150, 158, 164]   // light grey
     ];
     var INK = [45, 52, 54];
 
